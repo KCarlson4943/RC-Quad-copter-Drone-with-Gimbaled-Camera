@@ -1,61 +1,35 @@
-#include keyboard.h
+#include <Servo.h> // Arduino headers use angle brackets and are case-sensitive
 
+Servo myservo;     // You must declare your servo object before using it
 
-const int buttonPin = 2;  // Button connected to pin 2
-
-void setup() {
-
- pinMode(buttonPin, INPUT_PULLUP); // Set pin as input with internal pull-up resistor
-  Keyboard.begin();  
+void setup() { 
+  myservo.attach(9); // Connects the servo pin to digital pin 9
+  
+  myservo.write(90); // This sets the servo to its midpoint (90 degrees)
+  delay(500);        // Added missing semicolon
 }
 
 void loop() {
-  // this reapets until the program ends
-
-
-  if (digitalRead(buttonPin) == LOW) {
-//checks if the voltage is high
-     Keyboard.press(KEY_LEFT_CTRL);
-    Keyboard.press('v');
-delay(7000)
-      Keyboard.releaseAll();
-
-while(digitalread(buttonPin) == LOW) {
+// Setup runs only once. Code that repeats goes here.
 }
-  }
-    }
+#include <servo.h>
+
+Servo myServo;
 
 
-
-
-
-
-
-
-
-
-
-//basic IF loop for arduino
-
-const int BUTTON_PIN = 12;
-const int LED_PIN = 13;
-
-void setup(){
-
-pinMode(BUTTON_PIN, input);
-
-pinMode(LED_PIN, output);
-
+void setup() { //goes when I hit resart
+myServo.attach(9);
 }
-if(digitalread(buttonPin) == high){
-digitalWrite(LED_PIN, high); //high means on
- 
-}
- 
- else{
+
+Servo(angle >10(angle>170))
+
+
+void loop() {
+myServo.write(45); // numbers >90 go one way and <90 go oposite.
+delay(7000);
   
-  digitalWrite(LED_PIN, low); //low means off
- delay(7000)
-}
 
+myServo.write(90);
+  servo(90) ;//spin 90 degrees
+delay(2000);
 
