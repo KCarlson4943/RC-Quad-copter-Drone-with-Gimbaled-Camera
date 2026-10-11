@@ -1,1 +1,14 @@
+#include servo.h
+
+myServo.write(45)
+
+void setup() {
+if scan == true {
+  myservo.write(90);
+  delay(7000);
+}
+else{
+  delay(2000);
+  
+}
 
