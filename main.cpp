@@ -1,7 +1,6 @@
 #include <Servo.h> // Arduino headers use angle brackets and are case-sensitive
-#include
 Servo myservo;     // You must declare your servo object before using it
-const int potPin = A0;
+const int potPin = A0; //connects the potentiomerer to anolog pin 0
 int potValue;
 int angle;
 
@@ -23,7 +22,7 @@ Servo(angle >10(angle>170))
 
 
 void loop() {
-if analogRead(potPin) > 1000)){
+if analogRead(potPin) > 1000)){ //can be between 0-1023
   myServo.write(135);
   delay(6000);
 }
